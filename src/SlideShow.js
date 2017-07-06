@@ -7,9 +7,9 @@ class SlideShow extends React.Component {
         super(props);
         this.state = {
             images: [
-            'https://static.pexels.com/photos/356378/pexels-photo-356378.jpeg',
-            'https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg',
-            'https://static.pexels.com/photos/89775/dog-hovawart-black-pet-89775.jpeg'
+                'https://static.pexels.com/photos/356378/pexels-photo-356378.jpeg',
+                'https://static.pexels.com/photos/58997/pexels-photo-58997.jpeg',
+                'https://static.pexels.com/photos/89775/dog-hovawart-black-pet-89775.jpeg'
             ],
             currentImage: 0
         };
@@ -40,8 +40,8 @@ class SlideShow extends React.Component {
         console.log(imageDisplayed);
         return (
             <div>
-            <Img src={imageDisplayed} />
-            <Button changeImage={this.changeImage.bind(this)} />
+                <Img src={imageDisplayed} />
+                <Button changeImage={this.changeImage.bind(this)} />
             </div>
             );
     }
@@ -52,11 +52,12 @@ const Img = props => {
 }
 
 const Button = props => {
-    return <div>
-        <a href="#" style={{padding: "8px"}} onClick={() => props.changeImage(false)} >Previous</a>
-
-        <a href="#" onClick={() => props.changeImage(true)} >Next</a>
-    </div>
+    return (
+        <div>
+            <a href="#" style={{padding: "8px"}} onClick={() => props.changeImage(false)} >Previous</a>
+            <a href="#" onClick={() => props.changeImage(true)} >Next</a>
+        </div>
+        );
 }
 
 export default SlideShow;
