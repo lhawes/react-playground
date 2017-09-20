@@ -9,8 +9,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 retry(2) {
-                    sh 'echo "this is a test"
-                        npm run start'
+                    sh '''echo "this is a test"
+                        npm run start'''
                 }
 
                 timeout(time: 3, unit: 'MINUTES') {
