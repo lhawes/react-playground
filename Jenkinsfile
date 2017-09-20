@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'npm --version'
             }
+        }
         stage('Deploy') {
             steps {
                 retry(2) {
